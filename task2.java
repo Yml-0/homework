@@ -1,16 +1,25 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class task2 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int n1 = 0;
-        while (n!=0) {
-            n1 = n1 * 10 + n % 10;
-            n /= 10;
+        int a = in.nextInt();
+        int[] b = new int[a];
+        for (int i = 0; i < a; i++) {
+            b[i] = in.nextInt();
         }
-        System.out.println(n1);
-
+        System.out.println( avgOf4Digit(b));
+    }
+    public static double avgOf4Digit(int[] b){
+        int result = 0;
+        int count = 0;
+        for (int i = 0; i < b.length; i++) {
+            if ( b[i]>999 && b[i]<10_000) {
+                result+=b[i];
+                count++;
+            }
+        }
+        if (result == 0) return -1;
+        else return result/count;
     }
 }
