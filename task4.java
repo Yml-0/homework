@@ -1,18 +1,17 @@
 import java.util.Scanner;
-
 public class task4 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        String n1 = String.valueOf(n);
-        int min = n%10;
-        for (int i = 0; i < n1.length(); i++) {
-            if (n%10 != 0 && n%10<min)  min = n%10;
-            n /= 10;
+        Scanner input = new Scanner(System.in);
+        long a = input.nextLong();
+        long b;
+        long c = 9;
+        for (long i = 1; i < 1000000000;) {
+            b = a / i;
+            if (b < c && b > 0) {
+                c = b;
+            }
+            i = i*10;
         }
-        System.out.println(min);
-
-
+        System.out.println(c);
     }
-
 }
