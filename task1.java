@@ -1,10 +1,14 @@
 import java.util.Scanner;
+public class task1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int a = input.nextInt();
+        int a100 = a/100;
+        int a10 = a%100/10;
+        int a1 = a%10;
+        int sumNums = a100 + a10 + a1;
+        int a2 = a/2*2+2;
+        System.out.println(sumNums + " " + a2);
 
-public  classtask1 {
-    public static void main (String [] args) {
-        Scanner in = new Scanner (System.in );
-        short m = in.nextShort();
-        System.out.print((m / 100)+(m%100/10)+(m%10) + " ");
-        System.out.println(m + 2-m%2);
     }
 }
